@@ -2,10 +2,11 @@
 # define PUSH_SWAP_H
 
 
-#include "ft_libft/libft.h"
-#include<stdio.h>
-#include<unistd.h>
-
+# include "ft_libft/libft.h"
+# include<stdio.h>
+# include<unistd.h>
+# include<limits.h>
+# include<stdbool.h>
 
 typedef struct s_stack
 {
@@ -17,15 +18,9 @@ typedef struct s_stack
 	bool			cheapest;
 	struct s_stack	*target_node;
 	struct s_stack	*prev;
-	struct s_list	*next;
+	struct s_stack	*next;
 }				t_stack;
 
-typedef struct s_list
-{
-	int				value;
-	int				index;
-    struct s_list	*next;
-}	t_Stack
 
 // Instruction functions
 int		swap(t_list **stack);
